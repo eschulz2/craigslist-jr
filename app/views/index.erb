@@ -8,9 +8,16 @@
     </tr>
   </thead>
   <tbody>
-    <% @categories.each do |each| %>
+    <% @categories.each do |category| %>
       <tr>
-        <td><a href="/"
+        <td></td>
+        <td><a href="/category/<%= category.name %>"><%= category.name %></a></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+
 
 
 <!-- <a href="/Cars">Car Listings</a>
