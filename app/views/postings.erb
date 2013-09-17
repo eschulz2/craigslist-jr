@@ -1,0 +1,26 @@
+<h1>Postings!</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><a href="/cars/<%=car.id %>"><%= car.id %></a></td>
+        <td><%= car.make_model %></td>
+        <td><%= car.year %></td>
+        <td><%= car.description %></td>
+        <td><%= car.contact %></td>
+        <a href="/cars/<%= car.id %>/edit">Edit</a> | <a href="/cars/<%= car.id %>/delete">Delete</a>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<a href="/cars/new">Add Car Listing</a>
