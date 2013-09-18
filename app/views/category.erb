@@ -1,3 +1,8 @@
-<%= @category %>
+<%= @category.name %>
 
-<% posts = Post.where(Category.name = @category) %>
+<ul>
+
+<% @category.posts.each do |post| %>
+<li><%= post.price %> | <%= post.description %> | <%= post.contact %> </li>
+<% end %>
+</ul>

@@ -5,8 +5,9 @@ get '/' do
   erb :index
 end
 
-get '/category/:category' do
-  @category = params[:category]
+get '/category/:category_id' do
+  params[:category_id]
+  @category = Category.find(params[:category_id])
   erb :category
 end
 
